@@ -14,6 +14,7 @@
 &emsp; [Double Solenoids](#use-a-double-solenoid)  
 &emsp; [Compressors](#use-a-compressor)  
 &emsp; [Limit Switches](#use-a-limit-switch)
+&emsp; [PathWeaver](#pathweaver)
 &emsp; [Start Programming On Your Computer](#start-programming-on-your-device)
 
 [Examples](#examples)  
@@ -208,6 +209,32 @@ Here you can Install Git Desktop or Git Bash, whichever one you prefer.
 - Download link: [link](https://central.github.com/deployments/desktop/desktop/latest/win32)
 - Run the installer
 - Make sure ``Add to PATH`` option is selected
+
+### PathWeaver
+**PathWeaver is a program that lets you create "paths" that the robot will follow during the autonomous period.**
+- To open PathWeaver, select the three dots in the upper right corner of WPILib VS Code. From the dropdown menu, select "Start Tool", then "PathWeaver" from the additional dropdown menu.
+- Once PathWeaver is open, you will see a menu that allows you to select "Projects". Projects are folders where paths created in PathWeaver are stored. Select the project with the same directory as the code you are working on (you must double click to open it).
+	- If the project you are looking for isn't in the menu but a "PathWeaver" folder exists in the "FRC202X":
+		- Select "Import Project"
+		- Find the directory of the "PathWeaver" folder and open it within PathWeaver
+	- If the robot code folder doesn't have a "PathWeaver" folder
+		- Select "Create Project"
+		- From here there will be several menus that must be filled in. Starting from the top:
+			- "Project Directory" is where the project folder will be stored. Create a folder named "PathWeaver" in the "FRC202X" folder, then copy and paste the directory into the "Project Directory" section in PathWeaver.
+			- "Output Directory" is where the path files will be stored. Click "Browse" and navigate to "FRC20XX/src/main/deploy", then create a folder there called "paths".
+			- "Game" is where you select the FRC game the Robot you are pathweaving for will be playing.
+			- "Length Unit" is where you can change what units the PathWeaver program uses. Select "Meter".
+			- "Export Unit" is the units that PathWeaver exports paths in. Select "Always Meters".
+			- "Max Velocity" is the max velocity the robot will be able to travel while following a path. Use 2 as a baseline, but adjust as needed.
+			- "Max Acceleration" is the max acceleration the robot can have while following a path. Use 1.5 as a baseline, but adjust as needed.
+			- "Track Width" is the width between the two front wheels. Measure from the center of both wheels. If you do not have this value yet, use 7.5 but remember to change it as soon as you know the measurement.
+			- Select "Create Project" to create the project after completing every menu.
+- After opening the project, there will be 4 different sections to interact with.
+	- Field Section
+		- This displays the field for the selected game. 
+	- Autonomous Routines
+	- Waypoint Properties
+	- Paths
 
 #### Download and Install Java 11 SDK
 - Download the installer from this [link](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
